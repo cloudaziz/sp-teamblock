@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/team-image",
+	"parent": ["create-block/team-full"],
+	"version": "0.1.0",
+	"title": "Team Image Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example static block scaffolded with Create Block tool.",
+	"supports": {
+		"html": false
+	},
+	"keywords": ["team", "image", "teamimage"],
+	"attributes": {
+		
+		"teamImage":{
+			"type":"string",
+			"default": "https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png"
+		}
+	},
+	"textdomain": "team-image",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
