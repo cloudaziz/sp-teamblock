@@ -26,7 +26,7 @@ export default function Edit({ attributes, setAttributes }) {
 	};
 
 	return (
-		<div>
+		<div {...useBlockProps()}>
 			<InspectorControls>
 				<PanelBody title="Image Setting" initialOpen={true}>
 					<MediaUpload

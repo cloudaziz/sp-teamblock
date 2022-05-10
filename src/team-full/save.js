@@ -6,13 +6,7 @@ export default function save({ attributes }) {
 	const { teamImage } = attributes;
 	return (
 		<div {...useBlockProps.save()}>
-			<figure className="sp-team__wrapper__member">
-				<img
-					src={teamImage}
-					alt=""
-					className="sp-team__wrapper__member__picture"
-				/>
-			</figure>
+			<h1>Full Block</h1>
 		</div>
 	);
 }

@@ -1,12 +1,46 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
-
 .wp-block-create-block-team-social {
 	background-color: #21759b;
 	color: #fff;
 	padding: 2px;
+}
+
+.sp-team__wrapper__body {
+	text-align: center;
+	padding: 25px;
+
+	&__links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// & > a:not(:last-child) {
+		// 	margin-right: 15px;
+		// }
+
+		&--sp-margin-bottom {
+			margin-bottom: 25px;
+		}
+
+		&__social {
+			min-width: 40px;
+			min-height: 40px;
+			border-radius: 100%;
+			border: 1px solid #e5e5e5;
+
+			&:not(:last-child) {
+				margin-right: 8px;
+			}
+
+			&:hover {
+				background-color: rgb(207, 210, 31);
+				color: rgb(255, 255, 255);
+			}
+			color: #000;
+			text-decoration: none;
+			// display: inline-block;
+
+			display: grid;
+			place-items: center;
+			// background-color: #000;
+		}
+	}
 }

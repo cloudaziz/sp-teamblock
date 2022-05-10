@@ -22,7 +22,7 @@ export default function Edit({ attributes, setAttributes }) {
 	const { title, designation, aboutme } = attributes;
 
 	return (
-		<div>
+		<div {...useBlockProps()}>
 			<div className="sp-team__wrapper__body">
 				<RichText
 					tagName="h3"
@@ -54,3 +54,5 @@ export default function Edit({ attributes, setAttributes }) {
 		</div>
 	);
 }
+
+// "parent": ["create-block/team-full"]

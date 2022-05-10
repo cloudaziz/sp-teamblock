@@ -28,7 +28,7 @@ export default function Edit({ attributes, setAttributes }) {
 	} = attributes;
 
 	return (
-		<div>
+		<div {...useBlockProps()}>
 			<InspectorControls>
 				<PanelBody title="Social Icon Setting" initialOpen={true}>
 					<ToggleControl
@@ -84,7 +84,7 @@ export default function Edit({ attributes, setAttributes }) {
 					</PanelBody>
 				</PanelBody>
 			</InspectorControls>
-			<div className="sp-team__wrapper__social">
+			<div className="sp-team-wrapper-socials">
 				{toggleField && (
 					<div className="sp-team__wrapper__body__links sp-team__wrapper__body__links--sp-margin-bottom">
 						{twitterField != "" ? (

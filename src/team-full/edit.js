@@ -64,28 +64,6 @@ export default function Edit({ attributes, setAttributes }) {
 		}
 	};
 
-	// console.warn(social);
-	// function onChangeToggleField(newValue) {
-	// 	// setSocial(!social);
-	// 	// console.warn(social);
-	// 	setAttributes({ toggleField: newValue });
-	// 	// console.log(toggleField);
-	// }
-
-	// const onSelectImage = (newImage) => {
-	// 	setAttributes({ teamImage: newImage.sizes.full.url });
-	// };
-
-	// const onChangeContent = (newContent) => {
-	// 	setAttributes({ content: newContent });
-	// };
-	// const onChangeDesignation = (newContent) => {
-	// 	setAttributes({ designation: newContent });
-	// };
-	// const onChangeAbout = (newContent) => {
-	// 	setAttributes({ aboutme: newContent });
-	// };
-
 	return (
 		<div {...useBlockProps()}>
 			<InspectorControls>
@@ -128,7 +106,3 @@ export default function Edit({ attributes, setAttributes }) {
 // 	["create-block/team-info", { placeholder: "Inner Block Titel" }],
 // 	["create-block/team-social", { placeholder: "Inner Block Paragraph" }],
 // ];
-
-{
-	/* <InnerBlocks template={MY_TEMPLATE} templateLock="insert" /> */
-}
