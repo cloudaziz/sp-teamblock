@@ -1,28 +1,21 @@
 import { __ } from "@wordpress/i18n";
 
+import {
+	useBlockProps,
+	InspectorControls,
+	InnerBlocks,
+} from "@wordpress/block-editor";
+
+import { PanelBody } from "@wordpress/components";
+
+import { useState } from "@wordpress/element";
+
+import "./editor.scss";
+
 import teamLayout1 from "./images/layout-1.svg";
 import teamLayout2 from "./images/layout-2.svg";
 import teamLayout3 from "./images/layout-3.svg";
 import teamLayout4 from "./images/layout-4.svg";
-
-import {
-	useBlockProps,
-	RichText,
-	InspectorControls,
-	MediaUpload,
-	InnerBlocks,
-} from "@wordpress/block-editor";
-import { useState } from "@wordpress/element";
-
-import {
-	PanelBody,
-	TextControl,
-	ToggleControl,
-	Dashicon,
-	Button,
-} from "@wordpress/components";
-
-import "./editor.scss";
 
 const TEAM_IMAGE = [
 	["create-block/team-image", {}],
@@ -31,18 +24,8 @@ const TEAM_IMAGE = [
 ];
 
 export default function Edit({ attributes, setAttributes }) {
-	// console.warn("edit attributes", attributes);
-	const {
-		toggleField,
-		twitterField,
-		facebookField,
-		youtubeField,
-		emailField,
-		teamImage,
-		teamLayout,
-	} = attributes;
+	const { teamLayout } = attributes;
 
-	// const [social, setSocial] = useState(false);
 	const [layout, setLayout] = useState("default");
 	const teamLayoutFunction = () => {
 		setAttributes({ teamLayout: layout });
@@ -56,6 +39,22 @@ export default function Edit({ attributes, setAttributes }) {
 			case "second":
 				return (
 					<div className="sp-team">
+						<div className="sp-team__wrapper sp-team__wrapper--sp-padding">
+							<InnerBlocks template={TEAM_IMAGE} templateLock="insert" />
+						</div>
+					</div>
+				);
+			case "third":
+				return (
+					<div className="sp-team sp-team--radius">
+						<div className="sp-team__wrapper sp-team__wrapper--sp-padding">
+							<InnerBlocks template={TEAM_IMAGE} templateLock="insert" />
+						</div>
+					</div>
+				);
+			case "fourth":
+				return (
+					<div className="sp-team sp-team--radius">
 						<InnerBlocks template={TEAM_IMAGE} templateLock="insert" />
 					</div>
 				);
@@ -96,7 +95,7 @@ export default function Edit({ attributes, setAttributes }) {
 					</div>
 				</PanelBody>
 			</InspectorControls>
-			<div className="sp-team">{teamLayoutFunction()}</div>
+			{teamLayoutFunction()}
 		</div>
 	);
 }

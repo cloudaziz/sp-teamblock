@@ -2,19 +2,11 @@ import { __ } from "@wordpress/i18n";
 
 import {
 	useBlockProps,
-	RichText,
 	InspectorControls,
 	MediaUpload,
 } from "@wordpress/block-editor";
-import { useState } from "@wordpress/element";
 
-import {
-	PanelBody,
-	TextControl,
-	ToggleControl,
-	Dashicon,
-	Button,
-} from "@wordpress/components";
+import { PanelBody, Button } from "@wordpress/components";
 
 import "./editor.scss";
 
